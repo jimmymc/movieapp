@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @genre.name %>
+</p>
+<p>
+    <b>Movies For this Genre: </b> <br\>
+	<% @Genre.movies.each.do |m| %>
+    <%= m.title %>	
+	<%= m.image_tag(m.poster, :size => '30*30') %>
+	<br\> 
+	<% end %>
+<p/>
+
+<%= link_to 'Edit', edit_genre_path(@genre) %> |
+<%= link_to 'Back', genres_path %>
